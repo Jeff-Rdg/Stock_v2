@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+html,
+body {
+  height: 100%;
+
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: #D4D6B9;
+}
+
+.v-middle {
+  vertical-align: middle;
+}
+
+.j-content {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+* {
+  color: #c3ceda;
+}
