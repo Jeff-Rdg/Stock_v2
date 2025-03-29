@@ -23,5 +23,21 @@ body {
 }
 
 * {
-  color: #c3ceda;
+  color: #FFFFFF;
+}
+
+.mat-nav-list, .nav-list {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  a {
+    cursor: pointer;
+
+    &:active, &:focus {
+      outline: none;
+      background-color: transparent;
+    }
+  }
 }
