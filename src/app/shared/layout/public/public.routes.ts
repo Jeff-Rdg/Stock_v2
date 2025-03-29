@@ -13,9 +13,15 @@ export const PublicRoute: Route = {
       data: { title: 'Início', icon: 'home' },
     },
     {
-      path: 'product',
-      component: ProductComponent,
-      data: { title: 'Produto', icon: 'storefront' },
+      path: 'register',
+      data: { title: 'Cadastros', icon: 'edit', hasChildren: true },
+      children: [
+        {
+          path: 'product',
+          component: ProductComponent,
+          data: { title: 'Produto', icon: 'storefront' },
+        },
+      ],
     },
   ],
 };
