@@ -1,11 +1,11 @@
 import { Route } from '@angular/router';
-import { PublicComponent } from './public.component';
+import { PrivateComponent } from './private.component';
 import { HomeComponent } from '../../../modules/home/home.component';
 import { ProductComponent } from '../../../modules/product/product.component';
 
-export const PublicRoute: Route = {
+export const PrivateRoute: Route = {
   path: '',
-  component: PublicComponent,
+  component: PrivateComponent,
   children: [
     {
       path: '',

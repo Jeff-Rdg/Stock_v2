@@ -9,7 +9,7 @@ import {
   RouterLinkActive,
   RouterOutlet,
 } from '@angular/router';
-import { PublicRoute } from '../../layout/public/public.routes';
+import { PrivateRoute } from '../../layout/private/private.routes';
 import { NgForOf, NgIf } from '@angular/common';
 import { filter } from 'rxjs';
 
@@ -41,7 +41,7 @@ export class NavComponent implements OnInit {
   navItems = signal<NavItem[]>([]);
 
   ngOnInit() {
-    this.navItems.set(this.buildNavItems(PublicRoute.children || []));
+    this.navItems.set(this.buildNavItems(PrivateRoute.children || []));
 
     this.updateExpandedState();
     this.router.events

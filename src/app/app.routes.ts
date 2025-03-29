@@ -1,4 +1,4 @@
 import { Routes } from '@angular/router';
-import { PublicRoute } from './shared/layout/public/public.routes';
+import { PrivateRoute } from './shared/layout/private/private.routes';
 
-export const routes: Routes = [PublicRoute];
+export const routes: Routes = [PrivateRoute];

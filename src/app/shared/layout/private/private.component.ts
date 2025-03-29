@@ -4,12 +4,12 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { NavComponent } from '../../components/nav/nav.component';
 
 @Component({
-  selector: 'app-public',
+  selector: 'app-private',
   standalone: true,
   imports: [HeaderComponent, FooterComponent, NavComponent],
-  templateUrl: './public.component.html',
-  styleUrl: './public.component.scss',
+  templateUrl: './private.component.html',
+  styleUrl: './private.component.scss',
 })
-export class PublicComponent {
+export class PrivateComponent {
   name = 'Jefferson Rodrigues';
 }
