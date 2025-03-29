@@ -22,3 +22,28 @@ mat-sidenav-content {
   height: 100%;
   box-sizing: border-box;
 }
+
+.subitems {
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.02);
+
+  .subitem {
+    padding-left: 56px !important;
+    height: 40px !important;
+
+    &.active {
+      background: rgba(0, 0, 0, 0.04);
+      font-weight: 500;
+    }
+  }
+}
+
+.toggle-icon {
+  margin-left: auto;
+  transition: transform 0.2s;
+
+  .expanded & {
+    transform: rotate(180deg);
+  }
+}
+
