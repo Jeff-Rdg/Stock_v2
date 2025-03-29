@@ -68,7 +68,7 @@ export class NavComponent implements OnInit {
         const navItem: NavItem = {
           label: route.data!['title'],
           icon: route.data!['icon'],
-          route: isRootRoute ? '/' : fullPath,
+          route: fullPath,
           isExpanded: false,
         };
 
