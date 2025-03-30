@@ -14,7 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 
 @Component({
-  selector: 'app-create',
+  selector: 'app-product-create',
   imports: [
     CardComponent,
     MatButtonModule,
@@ -28,7 +28,7 @@ import { MatCardModule } from '@angular/material/card';
   templateUrl: './create.component.html',
   styleUrl: './create.component.scss',
 })
-export class CreateProductComponent {
+export class ProductCreateComponent {
   product: ProductModel = {
     name: '',
     price: undefined,
