@@ -2,7 +2,7 @@ import { Route } from '@angular/router';
 import { PrivateComponent } from './private.component';
 import { HomeComponent } from '../../../modules/home/home.component';
 import { ProductComponent } from '../../../modules/product/product.component';
-import { CreateProductComponent } from '../../../modules/product/components/create/create.component';
+import { ProductCreateComponent } from '../../../modules/product/components/create/create.component';
 
 export const PrivateRoute: Route = {
   path: '',
@@ -24,7 +24,7 @@ export const PrivateRoute: Route = {
         },
         {
           path: 'product/create',
-          component: CreateProductComponent,
+          component: ProductCreateComponent,
           data: { title: 'Criar produto' },
         },
       ],
