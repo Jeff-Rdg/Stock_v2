@@ -1,8 +1,41 @@
 .button-actions {
   display: flex;
   justify-content: flex-end;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid #C3CEDA;
 }
 
-app-button {
-  margin-left: 12px;
+.input-price::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
+
+mat-label {
+  color: #071330;
+}
+
+.card-form {
+  max-width: 800px;
+  margin: 24px auto;
+  padding: 24px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(7, 19, 48, 0.1);
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.mat-form-field {
+  color: #738FA7;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+  color: #0C4160;
+}
+

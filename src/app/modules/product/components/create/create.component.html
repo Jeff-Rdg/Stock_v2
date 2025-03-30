@@ -1,6 +1,24 @@
 <app-card title="Produtos" subtitle="Criar um novo produto"/>
 
-<div class="button-actions">
-  <app-button label="Salvar" (click)="showMessage()"/>
-  <app-button label="Cancelar" (click)="showMessage()"/>
-</div>
+<mat-card class="card-form">
+  <form (ngSubmit)="createProduct()">
+    <div class="form-content">
+      <mat-form-field appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input name="name" [(ngModel)]="product.name" matInput required placeholder="Ex. Soja">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Preço (R$)</mat-label>
+        <input class="input-price" type="number" name="price" [(ngModel)]="product.price" matInput placeholder="0">
+
+      </mat-form-field>
+      <div class="button-actions">
+        <app-button label="Salvar"/>
+        <app-button label="Cancelar" (click)="cancel()"/>
+      </div>
+    </div>
+  </form>
+
+
+</mat-card>
