@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
-import { FooterComponent } from '../../components/footer/footer.component';
 import { NavComponent } from '../../components/nav/nav.component';
 
 @Component({
   selector: 'app-private',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, NavComponent],
+  imports: [HeaderComponent, NavComponent],
   templateUrl: './private.component.html',
   styleUrl: './private.component.scss',
 })
