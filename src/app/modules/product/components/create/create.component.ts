@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CardComponent } from '../../../../shared/components/card/card.component';
 import { ProductService } from '../../services/product.service';
 import { MatButtonModule } from '@angular/material/button';
 import { AlertService } from '../../../../shared/services/alert.service';
@@ -16,7 +15,6 @@ import { MatCardModule } from '@angular/material/card';
 @Component({
   selector: 'app-product-create',
   imports: [
-    CardComponent,
     MatButtonModule,
     ButtonComponent,
     FormsModule,
