@@ -1,5 +1,13 @@
 <mat-sidenav-container class="container">
-  <mat-sidenav #sidenav class="side-nav" mode="side" opened>
+
+  <mat-sidenav class="side-nav" mode="side" opened>
+    <div class="logo-content">
+      <span>
+        <a [routerLink]="'/'">
+          <img class="logo v-middle" src="assets/logo.png" alt="logo"/>
+        </a>
+      </span>
+    </div>
     <mat-nav-list class="nav-list">
       <ng-container *ngFor="let item of navItems()">
         <div *ngIf="item.children; else singleItem">
@@ -14,15 +22,17 @@
               {{item.isExpanded ? 'expand_less' : 'expand_more'}}
             </i>
           </a>
-          <div *ngIf="item.isExpanded" class="subitems">
-            <a *ngFor="let child of item.children"
-               mat-list-item
-               class="subitem"
-               [routerLink]="child.route"
-               routerLinkActive="active">
-              <i class="material-icons v-middle">{{child.icon}}</i>
-              <span>{{child.label}}</span>
-            </a>
+          <div *ngIf="item.isExpanded" class="sub-items">
+            <ng-container *ngFor="let child of item.children">
+              <a
+                 mat-list-item
+                 class="sub-item"
+                 [routerLink]="child.route"
+                 routerLinkActive="active">
+                <i class="material-icons v-middle">{{child.icon}}</i>
+                <span>{{child.label}}</span>
+              </a>
+            </ng-container>
           </div>
         </div>
         <ng-template #singleItem>

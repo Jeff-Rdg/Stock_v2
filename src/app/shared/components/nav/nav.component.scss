@@ -1,19 +1,21 @@
+@use "variables" as v;
+@use "mixins" as m;
+
 .container {
   height: 100vh;
   overflow: auto;
-  padding-bottom: 60px;
 }
 
 .side-nav {
-  background-color: #0c4160;
+  @include m.gradient-bg(to right bottom, v.$primary, v.$secondary);
   width: 200px;
   border-radius: 0;
-  padding-top: 64px;
 
 }
 
 .side-nav i {
-  padding-right: 20px;
+   font-size: 1em;
+  padding-right: 10px;
 }
 
 mat-sidenav-content {
@@ -21,15 +23,15 @@ mat-sidenav-content {
   overflow: auto;
   height: 100%;
   box-sizing: border-box;
+  background-color: v.$background-content;
 }
 
-.subitems {
+.sub-items {
   overflow: hidden;
   background: rgba(0, 0, 0, 0.02);
 
-  .subitem {
-    padding-left: 56px !important;
-    height: 40px !important;
+  .sub-item {
+    padding-left: 36px !important;
 
     &.active {
       background: rgba(0, 0, 0, 0.04);
@@ -40,10 +42,38 @@ mat-sidenav-content {
 
 .toggle-icon {
   margin-left: auto;
-  transition: transform 0.2s;
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
 
   .expanded & {
     transform: rotate(180deg);
   }
 }
 
+.logo {
+  max-height: 52px;
+  max-width: 200px;
+  width: 160px;
+}
+
+.logo-content{
+  padding-top: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.mat-mdc-nav-list .mat-mdc-list-item {
+  margin-top: 10px;
+  width: 160px;
+  border-radius: 10px;
+  height: 32px;
+
+  &:hover {
+    background-color: #0c4160;
+  }
+}
+
+.mat-mdc-nav-list .mat-mdc-list-item span {
+  padding: 6px;
+  font-size: .8rem;
+}
