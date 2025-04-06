@@ -26,6 +26,12 @@ body {
   color: #FFFFFF;
 }
 
+.nav-list {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+}
+
 .mat-nav-list, .nav-list {
   -webkit-user-select: none;
   -moz-user-select: none;
