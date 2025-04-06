@@ -1,0 +1,13 @@
+@use '@angular/material' as mat;
+
+.table-container {
+  @include mat.elevation(4);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.table tr td {
+  color: #071330;
+
+}
